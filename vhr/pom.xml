@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>org.javaboy</groupId>
+    <artifactId>vhr</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>vhrserver</module>
+        <module>mailserver</module>
+    </modules>
+
+    <properties>
+        <springfox-swagger.version>2.8.0</springfox-swagger.version>
+        <swagger-bootstrap-ui.version>1.7.2</swagger-bootstrap-ui.version>
+
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/swagger-bootstrap-ui -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>${swagger-bootstrap-ui.version}</version>
+        </dependency>
+    </dependencies>
+
+
+
+    <!-- 不同环境的配置 -->
+<!--    <profiles>-->
+<!--        &lt;!&ndash;开发环境&ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>dev</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>dev</profiles.active>-->
+<!--            </properties>-->
+<!--            &lt;!&ndash;默认激活&ndash;&gt;-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--        </profile>-->
+<!--        &lt;!&ndash;测试环境&ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>test</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>test</profiles.active>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        &lt;!&ndash;生产环境&ndash;&gt;-->
+<!--        <profile>-->
+<!--            <id>prod</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>prod</profiles.active>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+
+
+</project>
